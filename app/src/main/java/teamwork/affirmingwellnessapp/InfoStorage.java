@@ -1,5 +1,6 @@
 package teamwork.affirmingwellnessapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +43,7 @@ public class InfoStorage extends AppCompatActivity{
                 height = Integer.valueOf(heightIntput.getText().toString());
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
-
+                startActivity(new Intent(InfoStorage.this, Settings.class));
             }
         });
 
