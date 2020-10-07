@@ -20,6 +20,11 @@ public class InfoStorage extends AppCompatActivity{
 
     Button submitButton;
 
+    int[] needs = new int[3];
+    int bmr, tdee, proteinCals, carbCals, fatCals;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,18 @@ public class InfoStorage extends AppCompatActivity{
                 height = Integer.valueOf(heightIntput.getText().toString());
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
+
+                bmr = (int) (height*6.25 + weight*9.99 - age*4.92 - 161);
+
+                tdee = (int) (bmr*1.275);
+
+                proteinCals = (int) (tdee*.25);
+                carbCals = (int) (tdee*.5);
+                fatCals = (int) (tdee*.25);
+
+
+
+
 
             }
         });
