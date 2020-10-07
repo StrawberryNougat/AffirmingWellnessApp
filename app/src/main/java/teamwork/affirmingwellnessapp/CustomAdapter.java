@@ -55,7 +55,7 @@ public class CustomAdapter extends ArrayAdapter<Protein> {
        Protein currentItem = getItem(position);
        if (currentItem != null) {
            textname.setText(currentItem.getName());
-           percent.setText(currentItem.getCurrent());
+           percent.setText(currentItem.getPercent());
        }
        return convertView;
 
@@ -63,8 +63,8 @@ public class CustomAdapter extends ArrayAdapter<Protein> {
 
     @Override
     public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        //return initView(position, convertView, parent);
-        return super.getDropDownView(position, convertView, parent);
+        return initView(position, convertView, parent);
+        //return super.getDropDownView(position, convertView, parent);
     }
     /*@Override
     public View getView(int i, View view, ViewGroup viewGroup) {

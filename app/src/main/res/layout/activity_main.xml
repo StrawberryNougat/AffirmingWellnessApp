@@ -12,25 +12,24 @@
         android:text="input" />
 
     <Button
-        android:layout_toRightOf="@id/input"
         android:id="@+id/summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/input"
         android:text="Summary" />
 
     <Button
-        android:layout_toRightOf="@id/summary"
         android:id="@+id/resources"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/summary"
         android:text="Resources " />
 
     <Button
-        android:layout_toRightOf = "@id/resources"
         android:id="@+id/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="settings "
-/>
+        android:layout_toRightOf="@id/resources"
+        android:text="settings " />
 
 </RelativeLayout>

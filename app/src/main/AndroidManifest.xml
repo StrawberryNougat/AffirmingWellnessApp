@@ -16,10 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name = "Summary"></activity>
+        <activity android:name = ".Summary"></activity>
         <activity android:name = "Resources"></activity>
         <activity android:name = "Settings"></activity>
         <activity android:name = "Input"></activity>
+        <activity android:name = ".InfoStorage"></activity>
+
     </application>
 
 </manifest>

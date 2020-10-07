@@ -13,12 +13,10 @@ public class MainActivity extends AppCompatActivity {
     private Button settingsButton;
     private Button inputButton;
     private Button resourceButton;
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        summaryButton = findViewById(R.id.summary);
+        summaryButton = (Button) findViewById(R.id.summary);
         settingsButton = findViewById(R.id.settings);
         inputButton = findViewById(R.id.input);
         resourceButton = findViewById(R.id.resources);

@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/inputInfoButton"
         android:layout_width="83dp"
         android:layout_height="60dp"
         android:text="InputInfo" />

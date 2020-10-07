@@ -2,7 +2,7 @@ package teamwork.affirmingwellnessapp;
 
 public class Protein {
     private String name;
-    private int dailyNeed;
+    private int dailyNeed = 1;
     private int current;
     public Protein(String name){
         this.name = name;
@@ -18,8 +18,9 @@ public class Protein {
     public int getDailyNeed(){
         return dailyNeed;
     }
-    public int getCurrent(){
-        return current;
+    public String getPercent(){
+        int percent = current/dailyNeed;
+        return percent + "% ";
     }
     public void setDailyNeed(int dailyNeed){
         this.dailyNeed = dailyNeed;

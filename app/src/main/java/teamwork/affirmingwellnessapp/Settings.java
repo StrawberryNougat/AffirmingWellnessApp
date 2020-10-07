@@ -14,8 +14,10 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
+        inputButton= findViewById(R.id.inputInfoButton);
+        configureInputButton();
     }
-    public void configureSummaryButton() {
+    public void configureInputButton() {
         inputButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
