@@ -21,7 +21,8 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
     @Override
     protected Void doInBackground(Void... voids) {
         try {
-            URL url = new URL("https://api.edamam.com/api/food-database/v2/parser?upc=011284003014&app_id=2a05ecdf&app_key=0a596e61132a5bab98bc647c8d917822");
+            URL url = new URL("https://api.edamam.com/api/food-database/v2/parser?ingr="+Input.mealInput
+                   + "&app_id=2a05ecdf&app_key=0a596e61132a5bab98bc647c8d917822");
             HttpURLConnection httpURLConnection =(HttpURLConnection) url.openConnection();
             InputStream inputStream =  httpURLConnection.getInputStream();
             BufferedReader bufferedReader= new BufferedReader(new InputStreamReader(inputStream));
