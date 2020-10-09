@@ -21,6 +21,7 @@
         <activity android:name = "Resources"></activity>
         <activity android:name = "Settings"></activity>
         <activity android:name = ".Input"></activity>
+        <activity android:name=".HardCodeMeal"></activity>
         <activity android:name = ".InfoStorage"></activity>
 
     </application>

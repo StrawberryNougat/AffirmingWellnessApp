@@ -30,12 +30,12 @@ public class CustomAdapter extends ArrayAdapter<Nutrient> {
            );
        }
        TextView textname = convertView.findViewById(R.id.textView);
-       TextView percent = convertView.findViewById(R.id.percent);
+       //TextView percent = convertView.findViewById(R.id.percent);
        ProgressBar progress = convertView.findViewById(R.id.progressBar);
        Nutrient currentItem = getItem(position);
        if (currentItem != null) {
            textname.setText(currentItem.getName());
-           percent.setText(currentItem.getPercent());
+           //percent.setText(currentItem.getPercent());
            progress.setMax(100);
            progress.setProgress(MainActivity.getMaster().get(position).getCurrent());
        }
