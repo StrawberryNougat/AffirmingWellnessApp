@@ -46,7 +46,9 @@
         android:layout_height="105dp"
         android:ems="10"
         android:hint="Enter name"
-        android:inputType="textPersonName"></EditText>
+        android:inputType="textPersonName">
+
+    </EditText>
 
     <EditText
         android:id="@+id/ageInput"
@@ -54,7 +56,9 @@
         android:layout_height="98dp"
         android:ems="10"
         android:hint="Enter age"
-        android:inputType="number"></EditText>
+        android:inputType="number">
+
+    </EditText>
 
     <EditText
         android:id="@+id/heightInput"
@@ -62,7 +66,9 @@
         android:layout_height="80dp"
         android:ems="10"
         android:hint="Enter height"
-        android:inputType="number"></EditText>
+        android:inputType="number">
+
+    </EditText>
 
     <EditText
         android:id="@+id/weightInput"
@@ -70,7 +76,9 @@
         android:layout_height="83dp"
         android:ems="10"
         android:hint="Enter weight"
-        android:inputType="number"></EditText>
+        android:inputType="number">
+
+    </EditText>
 
 
     <Button
