@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         inputButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Input.class));
+                startActivity(new Intent(MainActivity.this, HardCodeMeal.class));
             }
         });
     }
