@@ -40,6 +40,10 @@ public class InfoStorage extends AppCompatActivity {
 
     int bmr, tdee, proteinCals, carbCals, lipidCals;
     double vitA, vitB, vitC, calcium;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 
