@@ -1,5 +1,6 @@
 package teamwork.affirmingwellnessapp;
 
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,10 +8,10 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class InfoStorage extends AppCompatActivity{
+public class InfoStorage extends AppCompatActivity {
 
-    String name, pronouns, meal; //I think that we may want to add a pronoun option if the app ever uses them
-    int age, height, weight;
+    public static String name, pronouns, meal; //I think that we may want to add a pronoun option if the app ever uses them
+    public static int age, height, weight;
 
     EditText nameInput;
     EditText ageInput;
@@ -21,7 +22,9 @@ public class InfoStorage extends AppCompatActivity{
     Button submitButton;
 
     int[] needs = new int[3];
-    int bmr, tdee, proteinCals, carbCals, fatCals;
+    public static int bmr, tdee, proteinCals, carbCals, lipidCals;
+
+    public static double vitC, calcium, vitA, vitB;
 
 
 
@@ -35,7 +38,6 @@ public class InfoStorage extends AppCompatActivity{
         ageInput = (EditText) findViewById(R.id.ageInput);
         heightIntput = (EditText) findViewById(R.id.heightInput);
         weightInput = (EditText) findViewById(R.id.heightInput);
-        mealInput = (EditText) findViewById(R.id.mealInput);
 
 
         submitButton = (Button) findViewById(R.id.button);
@@ -48,17 +50,25 @@ public class InfoStorage extends AppCompatActivity{
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
 
-                bmr = (int) (height*6.25 + weight*9.99 - age*4.92 - 161);
+                bmr = (int) (height * 6.25 + weight * 9.99 - (age * 4.92 - 161));
 
-                tdee = (int) (bmr*1.275);
+                tdee = (int) (bmr * 1.275);
 
-                proteinCals = (int) (tdee*.25);
-                carbCals = (int) (tdee*.5);
-                fatCals = (int) (tdee*.25);
+                proteinCals = (int) (tdee * .25);
+                carbCals = (int) (tdee * .5);
+                lipidCals = (int) (tdee * .25);
 
-
-
-
+                if (age > 18) { //mg of vitamins per day for adults
+                    vitC = 75;
+                    vitB = 60;
+                    vitA = 50;
+                    calcium = 40;
+                } else {
+                    vitC = 65;
+                    vitB = 50;
+                    vitA = 40;
+                    calcium = 30;
+                }
 
             }
         });
@@ -66,4 +76,5 @@ public class InfoStorage extends AppCompatActivity{
 
 
     }
+
 }
