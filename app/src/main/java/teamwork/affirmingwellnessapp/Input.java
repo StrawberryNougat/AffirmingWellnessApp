@@ -25,9 +25,11 @@ public class Input extends AppCompatActivity {
         setContentView(R.layout.input);
 
         menuButton = findViewById(R.id.menuButton);
-        menuButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                finish();
+        menuButton.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View view) {
+                                              finish();
+                                          }
+                                      });
 
         mealButton = (Button)findViewById(R.id.crying);
         data = (TextView) findViewById(R.id.fetchedData);
@@ -37,8 +39,14 @@ public class Input extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mealInput=meal.getText().toString();
-                if(mealInput=="apple"){
-
+                if(mealInput.equals("apple")){
+                    MainActivity.getMaster().get(0).setCurrent(11);
+                    MainActivity.getMaster().get(1).setCurrent(0);
+                    MainActivity.getMaster().get(2).setCurrent(1);
+                    MainActivity.getMaster().get(3).setCurrent((int) 2);
+                    MainActivity.getMaster().get(4).setCurrent((int) 0);
+                    MainActivity.getMaster().get(5).setCurrent((int) 8);
+                    MainActivity.getMaster().get(6).setCurrent((int)2);
                 }
 
                 /*if(mealInput.indexOf(" ")!=-1){
@@ -55,3 +63,5 @@ public class Input extends AppCompatActivity {
 
     }
 }
+
+

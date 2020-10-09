@@ -59,10 +59,14 @@ public class HardCodeMeal extends AppCompatActivity {
                 currVitB = Integer.valueOf(vitBInput.getText().toString());
                 currVitC = Integer.valueOf(vitCInput.getText().toString());
                 currCalcium = Integer.valueOf(calciumInput.getText().toString());
+                MainActivity.getMaster().get(0).setCurrent(currCarb);
+                MainActivity.getMaster().get(1).setCurrent(currLip);
+                MainActivity.getMaster().get(2).setCurrent((int) currVitA);
+                MainActivity.getMaster().get(3).setCurrent((int) currVitB);
+                MainActivity.getMaster().get(4).setCurrent((int) currVitC);
+                MainActivity.getMaster().get(5).setCurrent((int)currCalcium);
 
-
-
-
+                finish();
 
             }
         });

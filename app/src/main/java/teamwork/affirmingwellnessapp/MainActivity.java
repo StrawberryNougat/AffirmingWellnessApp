@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         configureInputButton();
         configureResourceButton();
 
-        makeNutrientList();
 
     }
     public void configureSummaryButton(){
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         inputButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HardCodeMeal.class));
+                startActivity(new Intent(MainActivity.this, Input.class));
             }
         });
     }
@@ -80,12 +79,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void makeNutrientList(){
         if(master.size()==0) {
-            for (int i = 1; i < 5; i++) {
-                String a = "Protein" + i;
-                master.add(new Nutrient(a, i));
-            }
+            master.add(new Nutrient("Carbs", 150));
+            master.add(new Nutrient("Lipid", 70));
+            master.add(new Nutrient("Protein", 100));
+            master.add(new Nutrient("Vitamin A", 700));
+            master.add(new Nutrient("Vitamin B-12", 2));
+            master.add(new Nutrient("Vitamin C", 90));
+            master.add(new Nutrient("Calcium", 1000));
         }
-        master.get(2).setCurrent(60);
     }
     public static ArrayList<Nutrient> getMaster(){
         master.addAll(proteinArrayList);

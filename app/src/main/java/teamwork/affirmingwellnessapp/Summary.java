@@ -11,14 +11,18 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Summary extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
-        CustomAdapter proteinAdapter;
+        /*CustomAdapter proteinAdapter;
         CustomAdapter vitaminAdapter;
-        CustomAdapter mineralAdapter;
+        CustomAdapter mineralAdapter;*/
+        CustomAdapter masterAdapter;
         Button menuButton;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.summary_main);
 
-        proteinAdapter = new CustomAdapter(this, MainActivity.getProteinArrayList());
+        masterAdapter = new CustomAdapter(this, MainActivity.getMaster());
+        Spinner masterSpinner = findViewById(R.id.master);
+        masterSpinner.setAdapter(masterAdapter);
+        /*proteinAdapter = new CustomAdapter(this, MainActivity.getProteinArrayList());
         vitaminAdapter = new CustomAdapter(this, MainActivity.getVitaminArrayList());
         mineralAdapter = new CustomAdapter(this, MainActivity.getMineralArrayList());
         Spinner proteinSpinner = findViewById(R.id.proteins);
@@ -26,7 +30,7 @@ public class Summary extends AppCompatActivity {
         Spinner mineralSpinner = findViewById(R.id.minerals);
         proteinSpinner.setAdapter(proteinAdapter);
         vitaminSpinner.setAdapter(vitaminAdapter);
-        mineralSpinner.setAdapter(mineralAdapter);
+        mineralSpinner.setAdapter(mineralAdapter);*/
 
         menuButton = findViewById(R.id.menuButton);
         menuButton.setOnClickListener(new View.OnClickListener(){
