@@ -8,13 +8,12 @@ import android.widget.ArrayAdapter;
 //import com.AffirmingWellnessApp.AffirmingWellnessApp.Protein;
 
 import java.util.ArrayList;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import teamwork.affirmingwellnessapp.Protein;
+import teamwork.affirmingwellnessapp.Nutrient;
 
 public class Adapter extends ArrayAdapter {
-    public Adapter(Context context, ArrayList<Protein> workoutList){
+    public Adapter(Context context, ArrayList<Nutrient> workoutList){
         super(context,0, workoutList);
 
     }

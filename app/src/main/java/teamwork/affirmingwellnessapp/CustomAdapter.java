@@ -13,12 +13,12 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class CustomAdapter extends ArrayAdapter<Protein> {
+public class CustomAdapter extends ArrayAdapter<Nutrient> {
     /*Context context;
     ArrayList<Protein> proteinNames;
     LayoutInflater inflter;*/
 
-    public CustomAdapter(Context applicationContext,ArrayList<Protein> proteins) {
+    public CustomAdapter(Context applicationContext,ArrayList<Nutrient> proteins) {
         super(applicationContext, 0, proteins);
         /*this.context = applicationContext;
         this.proteinNames = proteins;
@@ -52,7 +52,7 @@ public class CustomAdapter extends ArrayAdapter<Protein> {
        }
        TextView textname = convertView.findViewById(R.id.textView);
        TextView percent = convertView.findViewById(R.id.percent);
-       Protein currentItem = getItem(position);
+       Nutrient currentItem = getItem(position);
        if (currentItem != null) {
            textname.setText(currentItem.getName());
            percent.setText(currentItem.getPercent());
