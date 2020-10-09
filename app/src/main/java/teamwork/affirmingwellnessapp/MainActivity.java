@@ -1,5 +1,10 @@
 package teamwork.affirmingwellnessapp;
 
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static ArrayList<Nutrient> mineralArrayList = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> overview = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> master = new ArrayList<Nutrient>();
+
 
     protected void onCreate(Bundle savedInstanceState) {
         makeNutrientList();
@@ -50,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Settings.class));
+                startActivity(new Intent(MainActivity.this, InfoStorage.class));
             }
         });
     }
@@ -107,4 +113,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return master;
     }
+
 }
