@@ -36,10 +36,13 @@ public class InfoStorage extends AppCompatActivity {
 
     Button submitButton;
 
+<<<<<<< Updated upstream
     Button backButton;
 
+=======
     int bmr, tdee, proteinCals, carbCals, lipidCals;
     double vitA, vitB, vitC, calcium;
+>>>>>>> Stashed changes
 
 
 
