@@ -18,12 +18,10 @@ public class MainActivity extends AppCompatActivity {
     private static ArrayList<Nutrient> proteinArrayList = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> vitaminArrayList = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> mineralArrayList = new ArrayList<Nutrient>();
-    private static ArrayList<Nutrient> overview = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> master = new ArrayList<Nutrient>();
 
     protected void onCreate(Bundle savedInstanceState) {
         makeNutrientList();
-        CustomAdapter overviewAdapter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         summaryButton = (Button) findViewById(R.id.summary);
@@ -34,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         configureSettingsButton();
         configureInputButton();
         configureResourceButton();
-        overviewAdapter = new CustomAdapter(this, MainActivity.getOverview());
-        Spinner overviewSpinner = findViewById(R.id.overviewSpinner);
-        overviewSpinner.setAdapter(overviewAdapter);
     }
     public void configureSummaryButton(){
         summaryButton.setOnClickListener(new View.OnClickListener(){
@@ -69,15 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Resources.class));
             }
         });
-    }
-    public static ArrayList<Nutrient> getOverview(){
-        overview.clear();
-        for(int i = 0; i < master.size(); i++){
-            if(master.get(i).getOverview()) {
-                overview.add(master.get(i));
-            }
-        }
-        return overview;
     }
     public static ArrayList<Nutrient> getProteinArrayList(){
         return proteinArrayList;

@@ -20,11 +20,11 @@ public class Settings extends AppCompatActivity {
     private Button inputButton;
     private Button menuButton;
     protected void onCreate(Bundle savedInstanceState) {
-        SelectorAdapter sadapter;
+        //SelectorAdapter sadapter;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
-        ArrayList<overviewActivity> overviewActivityArrayList = new ArrayList<>();
+        /*ArrayList<overviewActivity> overviewActivityArrayList = new ArrayList<>();
         for(int i = 0; i < MainActivity.getMaster().size(); i++){
             overviewActivity oa = new overviewActivity();
             oa.setTitle(MainActivity.getMaster().get(i).getName());
@@ -33,7 +33,7 @@ public class Settings extends AppCompatActivity {
         }
         sadapter = new SelectorAdapter(this, 0, overviewActivityArrayList);
         Spinner selector = findViewById(R.id.selector);
-        selector.setAdapter(sadapter);
+        selector.setAdapter(sadapter);*/
 
         menuButton = findViewById(R.id.menuButton);
         configureMenuButton();

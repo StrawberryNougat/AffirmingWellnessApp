@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Summary extends AppCompatActivity {
-    ProgressDialog progress = new ProgressDialog(this);
 
     protected void onCreate(Bundle savedInstanceState) {
         CustomAdapter proteinAdapter;
