@@ -1,6 +1,8 @@
 package teamwork.affirmingwellnessapp;
 
-import android.icu.text.IDNA;
+
+import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +22,6 @@ public class InfoStorage extends AppCompatActivity {
     EditText mealInput;
 
     Button submitButton;
-
-    int[] needs = new int[3];
-    public static int bmr, tdee, proteinCals, carbCals, lipidCals;
-
-    public static double vitC, calcium, vitA, vitB;
 
 
 
@@ -50,25 +47,6 @@ public class InfoStorage extends AppCompatActivity {
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
 
-                bmr = (int) (height * 6.25 + weight * 9.99 - (age * 4.92 - 161));
-
-                tdee = (int) (bmr * 1.275);
-
-                proteinCals = (int) (tdee * .25);
-                carbCals = (int) (tdee * .5);
-                lipidCals = (int) (tdee * .25);
-
-                if (age > 18) { //mg of vitamins per day for adults
-                    vitC = 75;
-                    vitB = 60;
-                    vitA = 50;
-                    calcium = 40;
-                } else {
-                    vitC = 65;
-                    vitB = 50;
-                    vitA = 40;
-                    calcium = 30;
-                }
 
             }
         });
