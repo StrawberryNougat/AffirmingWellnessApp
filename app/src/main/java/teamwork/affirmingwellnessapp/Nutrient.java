@@ -4,11 +4,12 @@ public class Nutrient {
     private String name;
     private int dailyNeed = 1;
     private int current;
-    private boolean overview = false;
+    private boolean overview;
     public Nutrient(String name, int dailyNeed){
         this.name = name;
         this.dailyNeed = dailyNeed;
         current = 0;
+        overview = true;
     }
     public void newDay(){
         current = 0;
@@ -23,6 +24,9 @@ public class Nutrient {
     public String getPercent(){
         int percent = current/dailyNeed;
         return percent + "% ";
+    }
+    public int getCurrent(){
+        return current;
     }
     public boolean getOverview(){
         return overview;
