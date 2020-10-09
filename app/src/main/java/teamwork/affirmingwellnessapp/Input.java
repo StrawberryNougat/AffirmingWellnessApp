@@ -4,20 +4,31 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Input extends AppCompatActivity {
-    //ProgressDialog progress = new ProgressDialog(this);
+
     private Button mealButton;
     public static TextView data;
     private EditText meal;
     public static String mealInput="";
+
     protected void onCreate(Bundle savedInstanceState) {
+        Button menuButton;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input);
+
+        menuButton = findViewById(R.id.menuButton);
+        menuButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                finish();
+
         mealButton = (Button)findViewById(R.id.crying);
         data = (TextView) findViewById(R.id.fetchedData);
         meal=(EditText)findViewById(R.id.wtf);
