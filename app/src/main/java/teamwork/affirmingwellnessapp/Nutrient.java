@@ -25,6 +25,9 @@ public class Nutrient {
         int percent = current/dailyNeed;
         return percent + "% ";
     }
+    public int getCurrent(){
+        return current;
+    }
     public boolean getOverview(){
         return overview;
     }

@@ -1,10 +1,5 @@
 package teamwork.affirmingwellnessapp;
 
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private static ArrayList<Nutrient> mineralArrayList = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> overview = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> master = new ArrayList<Nutrient>();
-
 
     protected void onCreate(Bundle savedInstanceState) {
         makeNutrientList();
@@ -56,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, InfoStorage.class));
+                startActivity(new Intent(MainActivity.this, Settings.class));
             }
         });
     }
@@ -77,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public static ArrayList<Nutrient> getOverview(){
-        for(int i = 0; i < master.size(); i++) {
-            if (master.get(i).getOverview()) {
+        overview.clear();
+        for(int i = 0; i < master.size(); i++){
+            if(master.get(i).getOverview()) {
                 overview.add(master.get(i));
             }
         }
@@ -94,24 +89,18 @@ public class MainActivity extends AppCompatActivity {
         return mineralArrayList;
     }
     public void makeNutrientList(){
-       // if(master.size()==0) {
+        if(master.size()==0) {
             for (int i = 1; i < 5; i++) {
                 String a = "Protein" + i;
                 master.add(new Nutrient(a, i));
             }
-        //}
+        }
+        master.get(2).setCurrent(60);
     }
     public static ArrayList<Nutrient> getMaster(){
-        for(int i = 0; i < proteinArrayList.size(); i++){
-            master.add(proteinArrayList.get(i));
-        }
-        for(int i = 0; i < vitaminArrayList.size(); i++){
-            master.add(vitaminArrayList.get(i));
-        }
-        for(int i = 0; i < mineralArrayList.size(); i++){
-            master.add(mineralArrayList.get(i));
-        }
+        master.addAll(proteinArrayList);
+        master.addAll(vitaminArrayList);
+        master.addAll(mineralArrayList);
         return master;
     }
-
 }

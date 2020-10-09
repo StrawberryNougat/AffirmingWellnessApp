@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            android:layout_constrainedHeight="false"
-            android:layout_constrainedWidth="true"
-            android:layout_constraintHorizontal_bias="0.971"
-            android:layout_constraintLeft_toLeftOf="parent"
-            android:layout_constraintRight_toRightOf="parent"
-            android:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="667dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
+<LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -43,40 +22,52 @@
     <EditText
         android:id="@+id/nameInput"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter name"
         android:inputType="textPersonName"></EditText>
-
     <EditText
         android:id="@+id/ageInput"
         android:layout_width="match_parent"
-        android:layout_height="98dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter age"
         android:inputType="number"></EditText>
-
     <EditText
         android:id="@+id/heightInput"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter height"
         android:inputType="number"></EditText>
-
     <EditText
         android:id="@+id/weightInput"
         android:layout_width="match_parent"
-        android:layout_height="83dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter weight"
         android:inputType="number"></EditText>
+    <EditText
+        android:id="@+id/mealInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter meal"
+        android:inputType="number"></EditText>
 
+
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="410dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Submit" />
 
 </LinearLayout>

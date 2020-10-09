@@ -1,5 +1,6 @@
 package teamwork.affirmingwellnessapp;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Summary extends AppCompatActivity {
-   // ProgressDialog progress = new ProgressDialog(this);
+    ProgressDialog progress = new ProgressDialog(this);
 
     protected void onCreate(Bundle savedInstanceState) {
         CustomAdapter proteinAdapter;
