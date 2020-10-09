@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         summaryButton = (Button) findViewById(R.id.summary);
         settingsButton = findViewById(R.id.settings);
         inputButton = findViewById(R.id.input);
@@ -38,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         configureSettingsButton();
         configureInputButton();
         configureResourceButton();
+
+
+
+
+
         /*recyclerView = (RecyclerView) findViewById(R.id.overview);
         overviewAdapter = new OverviewAdapter(getOverview());
         layoutManager = new LinearLayoutManager(getApplicationContext());
