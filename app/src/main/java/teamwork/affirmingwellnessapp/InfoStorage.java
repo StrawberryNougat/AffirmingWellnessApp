@@ -49,7 +49,37 @@ public class InfoStorage extends AppCompatActivity{
                 height = Integer.valueOf(heightIntput.getText().toString());
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
-                startActivity(new Intent(InfoStorage.this, Settings.class));
+
+                bmr = (int) (height * 6.25 + weight * 9.99 - (age * 4.92 - 161));
+
+                tdee = (int) (bmr * 1.275);
+
+                proteinCals = (int) (tdee * .25);
+                carbCals = (int) (tdee * .5);
+                lipidCals = (int) (tdee * .25);
+
+                if (age > 18) { //mg of vitamins per day for adults
+                    vitC = 75;
+                    vitB = 60;
+                    vitA = 50;
+                    calcium = 40;
+                } else {
+                    vitC = 65;
+                    vitB = 50;
+                    vitA = 40;
+                    calcium = 30;
+                }
+                finish();
+
+            }
+        });
+
+        backButton = (Button) findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                //startActivity(new Intent(InfoStorage.this, MainActivity.class));
             }
         });
 
