@@ -14,49 +14,48 @@
             android:id="@+id/menuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#92C0E0"
+            android:textColor="@android:color/white"
             android:text="MENU" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/vitamins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="none"
             android:text="Vitamins" />
 
         <Spinner
             android:id="@+id/vitamins"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Vitamins"/>
+            android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/minerals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="none"
             android:text="Minerals" />
 
         <Spinner
             android:id="@+id/minerals"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Minerals"/>
+            android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/proteins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="none"
             android:text="Proteins" />
 
         <Spinner
             android:id="@+id/proteins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Proteins"
 
             />
     </LinearLayout>

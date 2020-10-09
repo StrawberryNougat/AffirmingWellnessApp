@@ -27,6 +27,13 @@ public class Input extends AppCompatActivity {
             public void onClick(View v) {
                 mealInput=meal.getText().toString();
                 setContentView(R.layout.summary_main);
+                Button menu=(Button)findViewById(R.id.menuButton);
+                menu.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
                 /*if(mealInput=="apple"){
 
                 }*/

@@ -91,6 +91,7 @@ public class InfoStorage extends AppCompatActivity {
                     vitA = 40;
                     calcium = 30;
                 }
+                finish();
 
             }
         });
@@ -99,7 +100,8 @@ public class InfoStorage extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(InfoStorage.this, MainActivity.class));
+                finish();
+                //startActivity(new Intent(InfoStorage.this, MainActivity.class));
             }
         });
 
