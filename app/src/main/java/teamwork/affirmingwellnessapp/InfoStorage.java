@@ -1,17 +1,30 @@
 package teamwork.affirmingwellnessapp;
 
+
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public class InfoStorage extends AppCompatActivity{
+import java.util.ArrayList;
 
-    String name, pronouns, meal; //I think that we may want to add a pronoun option if the app ever uses them
-    int age, height, weight;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class InfoStorage extends AppCompatActivity {
+
+    public static String name, pronouns, meal; //I think that we may want to add a pronoun option if the app ever uses them
+    public static int age, height, weight;
 
     EditText nameInput;
     EditText ageInput;
@@ -19,7 +32,14 @@ public class InfoStorage extends AppCompatActivity{
     EditText weightInput;
     EditText mealInput;
 
+
+
     Button submitButton;
+
+    Button backButton;
+
+
+
 
 
     @Override
@@ -31,7 +51,6 @@ public class InfoStorage extends AppCompatActivity{
         ageInput = (EditText) findViewById(R.id.ageInput);
         heightIntput = (EditText) findViewById(R.id.heightInput);
         weightInput = (EditText) findViewById(R.id.heightInput);
-        mealInput = (EditText) findViewById(R.id.mealInput);
 
 
         submitButton = (Button) findViewById(R.id.button);
@@ -43,11 +62,21 @@ public class InfoStorage extends AppCompatActivity{
                 height = Integer.valueOf(heightIntput.getText().toString());
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
-                startActivity(new Intent(InfoStorage.this, Settings.class));
+
+
+            }
+        });
+
+        backButton = (Button) findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(InfoStorage.this, MainActivity.class));
             }
         });
 
 
 
     }
+
 }
