@@ -1,5 +1,6 @@
 package teamwork.affirmingwellnessapp;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +15,6 @@ public class Input extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input);
-<<<<<<< Updated upstream
-=======
         mealButton = (Button)findViewById(R.id.crying);
         data = (TextView) findViewById(R.id.fetchedData);
         mealButton.setOnClickListener(new View.OnClickListener() {
@@ -25,7 +24,5 @@ public class Input extends AppCompatActivity {
                 process.execute();
             }
         });
-
->>>>>>> Stashed changes
     }
 }
