@@ -9,6 +9,17 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class InfoStorage extends AppCompatActivity {
 
@@ -21,7 +32,12 @@ public class InfoStorage extends AppCompatActivity {
     EditText weightInput;
     EditText mealInput;
 
+
+
     Button submitButton;
+
+    Button backButton;
+
 
 
 
@@ -48,6 +64,14 @@ public class InfoStorage extends AppCompatActivity {
                 meal = mealInput.getText().toString();
 
 
+            }
+        });
+
+        backButton = (Button) findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(InfoStorage.this, MainActivity.class));
             }
         });
 
