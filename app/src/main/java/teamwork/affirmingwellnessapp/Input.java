@@ -26,9 +26,10 @@ public class Input extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mealInput=meal.getText().toString();
-                if(mealInput=="apple"){
+                setContentView(R.layout.summary_main);
+                /*if(mealInput=="apple"){
 
-                }
+                }*/
 
                 /*if(mealInput.indexOf(" ")!=-1){
                     for(int i=0;i<mealInput.length();i++){
