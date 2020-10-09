@@ -1,14 +1,15 @@
 package teamwork.affirmingwellnessapp;
 
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private Button settingsButton;
     private Button inputButton;
     private Button resourceButton;
+
+
 /*    private RecyclerView recyclerView;
     private RecyclerView.Adapter overviewAdapter;
     private RecyclerView.LayoutManager layoutManager;*/
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(overviewAdapter);*/
         makeNutrientList();
+
     }
     //for quote create a list, copy list, delete from second list as they are used, refill list when empty, randomly generate
     public void configureSummaryButton(){
