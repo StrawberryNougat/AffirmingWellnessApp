@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         makeNutrientList();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         summaryButton = (Button) findViewById(R.id.summary);
         settingsButton = findViewById(R.id.settings);
         inputButton = findViewById(R.id.input);
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         configureSettingsButton();
         configureInputButton();
         configureResourceButton();
+
+        makeNutrientList();
+
     }
     public void configureSummaryButton(){
         summaryButton.setOnClickListener(new View.OnClickListener(){
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         inputButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Input.class));
+                startActivity(new Intent(MainActivity.this, HardCodeMeal.class));
             }
         });
     }

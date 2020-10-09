@@ -22,6 +22,12 @@ public class InfoStorage extends AppCompatActivity{
     Button submitButton;
 
 
+
+    Button backButton;
+
+    int bmr, tdee, proteinCals, carbCals, lipidCals;
+    double vitA, vitB, vitC, calcium;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
