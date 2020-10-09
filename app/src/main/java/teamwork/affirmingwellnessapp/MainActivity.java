@@ -4,28 +4,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
     private Button summaryButton;
     private Button settingsButton;
     private Button inputButton;
     private Button resourceButton;
-/*    private RecyclerView recyclerView;
-    private RecyclerView.Adapter overviewAdapter;
-    private RecyclerView.LayoutManager layoutManager;*/
 
     private static ArrayList<Nutrient> proteinArrayList = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> vitaminArrayList = new ArrayList<Nutrient>();
     private static ArrayList<Nutrient> mineralArrayList = new ArrayList<Nutrient>();
+    private static ArrayList<Nutrient> overview = new ArrayList<Nutrient>();
+    private static ArrayList<Nutrient> master = new ArrayList<Nutrient>();
 
     protected void onCreate(Bundle savedInstanceState) {
+        makeNutrientList();
+        CustomAdapter overviewAdapter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         summaryButton = (Button) findViewById(R.id.summary);
@@ -36,15 +34,10 @@ public class MainActivity extends AppCompatActivity {
         configureSettingsButton();
         configureInputButton();
         configureResourceButton();
-        /*recyclerView = (RecyclerView) findViewById(R.id.overview);
-        overviewAdapter = new OverviewAdapter(getOverview());
-        layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(overviewAdapter);*/
-        makeNutrientList();
+        overviewAdapter = new CustomAdapter(this, MainActivity.getOverview());
+        Spinner overviewSpinner = findViewById(R.id.overviewSpinner);
+        overviewSpinner.setAdapter(overviewAdapter);
     }
-    //for quote create a list, copy list, delete from second list as they are used, refill list when empty, randomly generate
     public void configureSummaryButton(){
         summaryButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -78,20 +71,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public static ArrayList<Nutrient> getOverview(){
-        ArrayList<Nutrient> overview = new ArrayList<Nutrient>();
-        for(int i = 0; i < proteinArrayList.size(); i++){
-            if(proteinArrayList.get(i).getOverview()) {
-                overview.add(proteinArrayList.get(i));
-            }
-        }
-        for(int i = 0; i < vitaminArrayList.size(); i++){
-            if(vitaminArrayList.get(i).getOverview()) {
-                overview.add(vitaminArrayList.get(i));
-            }
-        }
-        for(int i = 0; i < mineralArrayList.size(); i++){
-            if(mineralArrayList.get(i).getOverview()) {
-                overview.add(mineralArrayList.get(i));
+        for(int i = 0; i < master.size(); i++) {
+            if (master.get(i).getOverview()) {
+                overview.add(master.get(i));
             }
         }
         return overview;
@@ -106,13 +88,14 @@ public class MainActivity extends AppCompatActivity {
         return mineralArrayList;
     }
     public void makeNutrientList(){
-        for(int i = 0; i < 5; i++){
-            String a = "Protein" +i;
-            proteinArrayList.add(new Nutrient(a, i));
-        }
+       // if(master.size()==0) {
+            for (int i = 1; i < 5; i++) {
+                String a = "Protein" + i;
+                master.add(new Nutrient(a, i));
+            }
+        //}
     }
     public static ArrayList<Nutrient> getMaster(){
-        ArrayList<Nutrient> master = new ArrayList<Nutrient>();
         for(int i = 0; i < proteinArrayList.size(); i++){
             master.add(proteinArrayList.get(i));
         }

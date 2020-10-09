@@ -43,7 +43,7 @@ public class InfoStorage extends AppCompatActivity{
                 height = Integer.valueOf(heightIntput.getText().toString());
                 weight = Integer.valueOf(weightInput.getText().toString());
                 meal = mealInput.getText().toString();
-                startActivity(new Intent(InfoStorage.this, Settings.class));
+                finish();
             }
         });
 

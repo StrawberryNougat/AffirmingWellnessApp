@@ -37,9 +37,10 @@
         android:layout_height="wrap_content"
         android:text="Overview" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/overview"
+    <Spinner
+        android:id="@+id/overviewSpinner"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
