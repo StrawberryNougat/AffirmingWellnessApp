@@ -17,11 +17,7 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
         try {
             URL url = new URL("https://api.edamam.com/api/food-database/v2/parser?ingr=red%20apple&app_id=2a05ecdf&app_key=0a596e61132a5bab98bc647c8d917822");
             HttpURLConnection httpURLConnection =(HttpURLConnection) url.openConnection();
-<<<<<<< Updated upstream
-            InputStream inputStream=  httpURLConnection.getInputStream();
-=======
             InputStream inputStream =  httpURLConnection.getInputStream();
->>>>>>> Stashed changes
             BufferedReader bufferedReader= new BufferedReader(new InputStreamReader(inputStream));
             String line="";
             while(line!=null){
@@ -40,14 +36,9 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-<<<<<<< Updated upstream
-        MainActivity.data.setText(this.data);
-    }
-}
-=======
         Input.data.setText(this.data);
     }
 }
 
 
->>>>>>> Stashed changes
+
